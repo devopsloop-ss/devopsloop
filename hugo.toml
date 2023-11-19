@@ -1,0 +1,66 @@
+baseURL = 'https://devopsloop.in/'
+languageCode = 'en-us'
+title = 'devopsloop'
+theme = 'hello-friend-ng'
+sectionPagesMenu = 'main'
+
+[params]
+  dateform        = "Jan 2, 2006"
+  dateformShort   = "Jan 2"
+  dateformNum     = "2006-01-02"
+  dateformNumTime = "2006-01-02 15:04"
+
+  # Subtitle for home
+  homeSubtitle = "A blog by a DevOps engineer"
+
+  # Set disableReadOtherPosts to true in order to hide the links to other posts.
+  disableReadOtherPosts = false
+
+  # Enable sharing buttons, if you like
+  enableSharingButtons = true
+  
+  # Show a global language switcher in the navigation bar
+  enableGlobalLanguageMenu = false
+
+  # Metadata mostly used in document's head
+  description = "A Blog about DevOps Journey, tools and tech"
+  keywords = "homepage, blog"
+  images = [""]
+
+[taxonomies]
+    category = "blog"
+    tag      = "tags"
+    series   = "series"
+
+[languages]
+  [languages.en]
+    title = "What is this about?"
+    copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
+    
+
+  [languages.en.params]
+    subtitle  = "A simple theme for Hugo"
+    keywords = ""
+    readOtherPosts = "Read other posts"
+
+    [languages.en.params.logo]
+    #  logoText = "devopsloop"
+      logoHomeLink = "/"
+    # or
+    #
+      path = "/img/devopsloop-new.png"
+      alt = "devopsloop"
+
+  # And you can even create generic menu
+  [[menu.main]]
+    identifier = "blog"
+    name       = "Blog"
+    url        = "/blog"
+
+  [[menu.main]]
+    identifier = "profile"
+    name       = "About me"
+    url        = "/profile"
+  #  [[params.social]]
+  #    name = "linkedin"
+  #    url = "https://www.linkedin.com/in/shubham-om-sinha/"

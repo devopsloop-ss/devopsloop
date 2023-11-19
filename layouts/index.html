@@ -1,0 +1,32 @@
+{{ define "body" }}
+    <body class="{{ if .Site.Params.backgroundImage }} background-image" style="background-image: url('{{ .Site.Params.backgroundImage }}');" {{ else }}"{{ end }}>
+{{ end }}
+
+{{ define "main" }}
+    <main aria-role="main">
+        <div>
+            Recent posts:
+            {{- range ( where site.RegularPages "Section" "blog" | first 4 ) }}
+            <ul style="display:inline;"><a href="{{ .Permalink }}">{{ .Title }}</a></ul>
+            {{- end}}
+            {{ if .Site.Params.Portrait.Path }}
+               <img src="{{ .Site.Params.Portrait.Path }}" class="circle" alt="{{ .Site.Params.Portrait.Alt }}" style="max-width:{{ .Site.Params.Portrait.MaxWidth }}" />
+            {{ end }}
+
+            <h1>{{ .Site.Title }}</h1>
+
+            {{ partial "subtitle.html" . }}
+
+            {{- with .Site.Params.social }}
+                <div>
+                    {{ partial "social-icons.html" . }}
+                </div>
+            {{- end }}
+            <div style="margin-right: 20%;margin-left: 20%;"> 
+                
+                {{.Content }}
+
+            </div>
+        </div>
+    </main>
+{{ end }}
