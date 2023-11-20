@@ -64,3 +64,9 @@ sectionPagesMenu = 'main'
   #  [[params.social]]
   #    name = "linkedin"
   #    url = "https://www.linkedin.com/in/shubham-om-sinha/"
+
+  [deployment]
+
+  [[deployment.targets]]
+  name = "production"
+  URL  = "s3://site-prod-devopsloop-site-origin?region=us-east-1"
