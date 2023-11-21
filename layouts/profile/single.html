@@ -1,5 +1,5 @@
 {{ define "main" }}
-    <main class="post" style="width: 95%;margin-left: auto; margin-right: auto;">
+    <main class="post">
 
         <div class="post-info">
             {{ if .IsTranslated }}
@@ -12,34 +12,20 @@
         </div>
 
         <article>
-            <h2 class="post-title" style="margin-bottom: 0%;">
+            <h2 class="post-title" style="margin-bottom: 0%;display:inline-block;margin-right:0%;">
                 <a href="{{ .Permalink }}">{{ .Title | markdownify }}</a> 
-                {{ if .Params.profilePic }}
-                <figure style="width: 18%;height: 18%;position: relative;overflow: hidden;border-radius: 50%;  margin-left:40%; margin-top: -5%; margin-bottom: -5%;">
-                    <img src="{{ .Params.profilePic | absURL }}" alt="{{ .Title }}" />
-                </figure>
-            {{ end }}
             </h2>
-            {{- with .Site.Params.social }}
-                <div>
-                    {{ partial "social-icons.html" . }}
-                </div>
-            {{- end }}
-            
-            {{ if .Params.toc }}
-                <hr />
-                <aside id="toc">
-                <div class="toc-title">{{ i18n "tableOfContents" }}</div>
-                    {{ .TableOfContents }}
-                </aside>
-                <hr />
+            {{ if .Params.profilePic }}
+            <picture style="width:18%;height:18%;overflow:hidden;float:right;margin-bottom:10%;">
+                <img src="{{ .Params.profilePic | absURL }}" alt="{{ .Title }}" style="border-radius: 50%;"/>
+            </picture>
             {{ end }}
         </article>
         <article> 
             <div class="post-content" style="margin-top: 0%;">
                 <style>
                     h2 {
-                        margin-top: 0%;
+                        margin-top: 2%;
                     }
                 </style>
                 {{ .Content }}
