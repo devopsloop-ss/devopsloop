@@ -27,6 +27,11 @@ sectionPagesMenu = 'main'
   keywords = "homepage, blog"
   images = [""]
 
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
 [taxonomies]
     category = "blog"
     tag      = "tags"
