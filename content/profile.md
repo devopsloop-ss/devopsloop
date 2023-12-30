@@ -8,11 +8,11 @@ profilePic = "/img/profile_image.jpg"
 
 * * *
 
-[shubham@devopsloop.in](mailto:shubham@devopsloop.in) ∙ [LinkedIn/shubham-om-sinha](https://www.linkedin.com/in/shubham-om-sinha/) ∙ [View/Download as PDF](/Shubham-DevOps-Resume.pdf)
+[shubham@devopsloop.in](mailto:shubham@devopsloop.in) ∙ [LinkedIn/shubham-om-sinha](https://www.linkedin.com/in/shubham-om-sinha/) ∙ [View/Download as PDF](/Shubham-DevOps-Resume-2023-final.pdf)
 
 ### Overview
 
-Driven by my interest in learning and implementing new tools and technologies, I am a firm believer of the agile way of making small incremental changes towards achieving big goals.
+Results-oriented DevOps Engineer with 5+ years of experience designing, implementing, and automating cloud infrastructure and deployments. Proven expertise in Infrastructure as Code (IaC) with Terraform, continuous integration and continuous delivery (CI/CD) pipelines, and containerization with Kubernetes. Passionate about open source and fostering collaboration within teams. A firm believer of the agile way of making small incremental changes towards achieving big goals.
 
 <table style="border: none;">
 <tr style="border: none;">
@@ -24,16 +24,17 @@ Driven by my interest in learning and implementing new tools and technologies, I
 </th>
 <th style="border: none;width: 50%">
 
-### Past Certifications
+### Other / Past Certifications
 
 </th>
 </tr>
 <tr style="border: none;">
 <td style="border: none;width: 50%">
 
-{{< badges badgelink="https://www.credly.com/badges/493e093f-2265-4eae-bc0b-f53b1982cc42/public_url" src="/img/certification-badges/aws-devops-pro.png" alt="AWS: Certified Devops Professional" position="relative" style="border-radius: 8px;width:100px; height: 100px; margin-left: 0px;" >}}
-{{< badges badgelink="https://www.credly.com/badges/a0e8acca-c9ce-42bb-943e-30fc15675613/public_url" src="/img/certification-badges/ckad.png" alt="CNCF: Certified Kubernetes Application Developer" position="relative" style="border-radius: 8px;width:100px; height: 100px; margin-left: 0px;" >}}
-{{< badges badgelink="https://www.credly.com/badges/2b1f0fca-5b00-4aa4-ac59-4d6615eebe7b/public_url" src="/img/certification-badges/terraform-associate-003.png" alt="HashiCorp Certified: Terraform Associate" position="relative" style="border-radius: 8px;width:100px; height: 100px; margin-left: 0px;" >}}
+{{< badges badgelink="https://www.credly.com/badges/493e093f-2265-4eae-bc0b-f53b1982cc42/public_url" src="/img/certification-badges/aws-devops-pro.png" alt="AWS: Certified Devops Professional" position="relative" style="border-radius: 8px;width:82px; height: 82px; margin-left: 0px;" >}}
+{{< badges badgelink="https://www.credly.com/badges/e05147b8-c5a2-46a0-b900-b6f732e8527a/public_url" src="/img/certification-badges/aws-ans.png" alt="AWS: Certified Devops Professional" position="relative" style="border-radius: 8px;width:82px; height: 82px; margin-left: 0px;" >}}
+{{< badges badgelink="https://www.credly.com/badges/2b1f0fca-5b00-4aa4-ac59-4d6615eebe7b/public_url" src="/img/certification-badges/terraform-associate-003.png" alt="HashiCorp Certified: Terraform Associate" position="relative" style="border-radius: 8px;width:82px; height: 82px; margin-left: 0px;" >}}
+{{< badges badgelink="https://www.credly.com/badges/a0e8acca-c9ce-42bb-943e-30fc15675613/public_url" src="/img/certification-badges/ckad.png" alt="CNCF: Certified Kubernetes Application Developer" position="relative" style="border-radius: 8px;width:82px; height: 82px; margin-left: 0px;" >}}
 
 </td>
 <td style="border: none;width: 50%">
@@ -50,54 +51,40 @@ Driven by my interest in learning and implementing new tools and technologies, I
 
 ### Work Experience
 
-<table style="border: none;">
-<tr style="border: none;">
-
-<th style="border: none;width: 50%"> 
+<div style="border: none;">
 
 **SourceFuse  (Nov 2020 - Current)**
 
-</th>
-<th style="border: none;width: 50%">
-
-**Daffodil Software  (Jan 2019 - Oct 2020)**
-
-</th>
-</tr>
-<tr style="border: none;">
-<td style="border: none;width: 50%;vertical-align: top;">
-
 Roles:
--   Devops Engineer 
--   Junior DevOps Engineer
+DevOps Engineer (Current), Junior DevOps Engineer
 
 Highlights:
--   Awarded for teamwork and agility.
--   Contribute to org's owned open source terraform modules.
--   Handled communication with different stakeholders to meet overall project requirements.
+- Awarded for teamwork and agility demonstrating leadership and commitment to collaboration.
+- Own and contribute to the development of organization's open source Terraform modules, promoting reusable infrastructure code.
+- Leveraged Terraform and AWS to build, manage, and scale cloud infrastructure across multiple environments.
+- Collaborate with cross-functional teams to understand project requirements and deliver secure, efficient infrastructure solutions.
+- Drive automation initiatives across CI/CD pipelines using GitHub Actions and Jenkins, optimizing development velocity, and minimizing manual effort.
+- Implemented Kubernetes clusters and Helm charts for containerized deployments, achieving increased agility and resource utilization.
+- Employed Bash and PowerShell scripting for automation tasks, enhancing operational efficiency.
+
 
 Skills: Terraform, AWS, GitHub Actions, Kubernetes, Helm, Bash, Powershell, Jenkins, OSS
 
-</td>
-<td style="border: none;width: 50%;vertical-align: top;">
+**Daffodil Software  (Jan 2019 - Oct 2020)**
 
 Roles:
--   Junior Associate IT (DevOps)
+Junior Associate IT (DevOps)
 
 Highlights:
--   Designed and helped in designing Cloud-based solutions that fulfilled the functional, scalability, cost, compliance, and performance requirements (on AWS)
--   Created Ansible playbooks and roles and helped peers to get started with Ansible.
--   Documented various architectures, procedures, tools, and practices.
--   Active participant in internal training programmes
+- Collaborated on designing cloud-based solutions on AWS, considering functional, scalability, cost, compliance, and performance needs.
+- Developed Ansible playbooks and roles, streamlining configuration management and onboarding new team members to the technology.
+- Documented architectures, procedures, tools, and best practices, enabling knowledge transfer and team alignment.
+- Actively participated in internal training programs, demonstrating continuous learning and commitment to professional development 
 
 Skills: Ansible, Kubernetes, AWS, GCP
-
-</td>
-</tr>
-</table>
+</div>
 
 ### Projects
-
 <table style="border: none;">
 <tr style="border: none;">
 
@@ -105,50 +92,38 @@ Skills: Ansible, Kubernetes, AWS, GCP
 
 **IaC migration of an Enterprise Grade AWS Infra**
 
--   Setup IaC and surrounding automation for moving manually created as well as CDK generated resources to Terraform.
--   Importing existing resources or create newer more optimised configuration for resources wherever necessary.
--   Plan stage wise migration of different Infra and application resources on AWS.
--   Integrate GitHub Actions and create CI/CD automation.
-    Internal development platform
--   Leverage IaC (terraform) as well as OSS tools like backstage to enable developers to set up new environments with minimal effort and time.
--   End to end CI/CD with Terraform using GitHub actions.
--   Create and maintain templates for repetitive configurations.
--   Create and maintain reusable terraform modules.
+Scope: </br>
+An enterprise client wanted to migrate their manually created infra on AWS to Terraform. Our goal was to support them through this transition by implementing reusable and easy to maintain IaC in Terraform and work together create the surrounding automation for the deployments. 
 
-</td>
-<td style="border: none;width: 50%;vertical-align: top;">
-
-**Backend API product for 5G infra of an enterprise client**
-
--   Deploy and maintain the APIs in the various environments on the client's proprietary container platform on their on-premises infra.
--   Meet various audit and security related requirements by integrating with various tools (like artifactory, keycloak, istio, f5 etc.) and services on their platform.
--   Disaster recovery and support on incidents for production.
--   Automated deployments using Jenkins and AWS DevOps tools.
-
-</td>
-</tr>
-<tr style="border: none;">
-<td style="border: none;width: 50%;vertical-align: top;">
+Highlights:
+- Reduced manual configuration.
+- Improved infrastructure consistency.
+- Faster deployments with GitHub Actions and Terraform.
 
 **Internal development platform**
 
-- Leverage IaC (terraform) as well as OSS tools like backstage to enable developers to set up new environments with minimal effort and time.
-- End to end CI/CD with Terraform using GitHub actions.
-- Create and maintain templates for repetitive configurations.
-- Create and maintain reusable terraform modules.
+Scope: </br>
+Our organization needed to standardize our infrastructure across projects and create reusable components to speed up the initial infrastructure setup. This had to be made available to teams via a self-service platform.
 
 </td>
 <td style="border: none;width: 50%;vertical-align: top;">
 
-**Mobile game backend for a card game:**
+Highlights:
+- Increased developer productivity
+- Reduced environment setup time using reusable IaC components.
+- Improved infrastructure management
 
-  To implement and maintain the following:
+**Backend API product for 5G infra of an enterprise client**
 
--   EC2 based infra with auto scaling.
--   Self-hosted MongoDB Replica set.
--   Secure Connectivity with on premise servers and AWS Infra with AWS Site to site VPN.
--   Automated deployments.
--   Automated SSL certificate updates for multiple application endpoints.
+Scope: 
+Our client was an Enterprise with their own 5G platform, working with various vendors to deliver infrastructure services and solutions to telecom companies. They needed to develop a mission critical API service to meet the telecom compliance requirements in their country.
+
+Highlights:
+- Increased API uptime and availability
+- Supported the team through the development.
+- Improved audit and security compliance
+- Reduced incident response time
+
 
 </td>
 </tr>
