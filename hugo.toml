@@ -18,7 +18,7 @@ sectionPagesMenu = 'main'
 
   # Enable sharing buttons, if you like
   enableSharingButtons = true
-  
+
   # Show a global language switcher in the navigation bar
   enableGlobalLanguageMenu = false
 
@@ -41,7 +41,7 @@ sectionPagesMenu = 'main'
   [languages.en]
     title = "What is this about?"
     copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
-    
+
 
   [languages.en.params]
     subtitle  = "A simple theme for Hugo"
@@ -73,5 +73,5 @@ sectionPagesMenu = 'main'
   [deployment]
 
   [[deployment.targets]]
-  name = "production"
+  name = "prod"
   URL  = "s3://site-prod-devopsloop-site-origin?region=us-east-1"
