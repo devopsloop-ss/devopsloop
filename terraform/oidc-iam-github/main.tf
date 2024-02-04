@@ -6,6 +6,10 @@ terraform {
       source  = "hashicorp/aws"
       version = "~> 5.0"
     }
+    github = {
+      source  = "integrations/github"
+      version = "~> 5.0"
+    }
   }
   backend "s3" {}
 }
@@ -14,11 +18,16 @@ provider "aws" {
   region = "us-east-1"
   default_tags {
     tags = {
-      Project  = "devopsloop"
-      Function = "site"
+      Project     = var.project_name
+      Function    = "site"
+      Environment = var.environment
+      repo        = var.repo_name
+      path        = "terraform/oidc-iam-github"
     }
   }
 }
+
+provider "github" {}
 
 # OIDC provider GitHub
 
@@ -26,11 +35,6 @@ module "iam_github_oidc_provider" {
   source = "terraform-aws-modules/iam/aws//modules/iam-github-oidc-provider"
   #checkov:skip=CKV_TF_1: This is a module with reliable versioning control. Terraform registry versioning is adequate.
   version = "5.34.0"
-
-  tags = {
-    Project     = var.project_name
-    Environment = "prod"
-  }
 }
 
 # IAM Roles GitHub
@@ -93,10 +97,6 @@ resource "aws_iam_policy" "github_actions_cloudfront_site" {
 
   policy = data.aws_iam_policy_document.github_actions_cloudfront_site.json
 
-  tags = {
-    Project     = var.project_name
-    Environment = "prod"
-  }
 }
 
 ## IAM role that allows access only from this repo
@@ -112,8 +112,11 @@ module "iam_github_oidc_role" {
     "${aws_iam_policy.github_actions_cloudfront_site.name}" = "${aws_iam_policy.github_actions_cloudfront_site.arn}"
   }
 
-  tags = {
-    Project     = var.project_name
-    Environment = "prod"
-  }
+}
+
+resource "github_actions_environment_secret" "env_role_secret" {
+  repository      = basename(var.repo_name)
+  environment     = var.environment
+  secret_name     = "AWS_DEPLOY_ROLE_ARN"
+  plaintext_value = module.iam_github_oidc_role.arn
 }

@@ -2,7 +2,7 @@ name: Deploy Hugo Site to GitHub Pages
 
 on:
   pull_request:
-    branches: 
+    branches:
       - main
   workflow_dispatch:
 
@@ -25,7 +25,7 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
-          publish_branch: gh-pages
+          publish_branch: main
           cname: devopsloop-ss.github.io
 
       - name: Display deployment link
