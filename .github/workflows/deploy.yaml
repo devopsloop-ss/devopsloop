@@ -24,8 +24,10 @@ jobs:
           role-to-assume: ${{ secrets.AWS_DEPLOY_ROLE_ARN }}
           role-session-name: hugo-deploy-${{ github.run_id }}
 
-      - name: Install Hugo
-        run: sudo apt-get update && sudo apt-get install hugo -y
+      - name: Set up Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: latest
 
       - name: Build the Hugo site
         run: hugo

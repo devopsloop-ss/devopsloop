@@ -107,7 +107,7 @@ module "iam_github_oidc_role" {
 
   name = "${var.project_name}-github"
 
-  subjects = ["devopsloop-ss/devopsloop:environment:${var.environment}:*"]
+  subjects = ["devopsloop-ss/devopsloop:environment:${var.environment}"]
 
   policies = {
     #tflint-ignore: terraform_deprecated_interpolation
