@@ -34,7 +34,8 @@ jobs:
 
       - name: Deploy to S3
         run: |
-          hugo deploy --logLevel debug --target prod # Change target to a var if you have multiple target envs
+          ls public/
+          hugo deploy --target prod # Change target to a var if you have multiple target envs
 
       - name: Invalidate CloudFront cache (optional)
         run: aws cloudfront create-invalidation --distribution-id ${{secrets.AWS_CLOUDFRONT_DISTRIBUTION_ID}} --paths "/*"
