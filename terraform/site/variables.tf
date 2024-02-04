@@ -5,6 +5,18 @@ variable "project_name" {
   default     = "devopsloop-site"
 }
 
+variable "environment" {
+  type        = string
+  description = "Name of the target environment"
+  default     = "prod"
+}
+
+variable "repo_name" {
+  type        = string
+  description = "Name of this repo. Used for tagging resources."
+  default     = "devopsloop-ss/devopsloop"
+}
+
 variable "site_domain" {
   type        = string
   description = "Doman name of the site"

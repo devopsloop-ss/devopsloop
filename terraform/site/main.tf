@@ -6,7 +6,12 @@ terraform {
       source  = "hashicorp/aws"
       version = "~> 5.0"
     }
+    github = {
+      source  = "integrations/github"
+      version = "~> 5.0"
+    }
   }
+
   backend "s3" {}
 }
 
@@ -14,11 +19,16 @@ provider "aws" {
   region = "us-east-1"
   default_tags {
     tags = {
-      Project  = var.project_name
-      Function = "site"
+      Project     = var.project_name
+      Function    = "site"
+      Environment = var.environment
+      repo        = var.repo_name
+      path        = "terraform/oidc-iam-github"
     }
   }
 }
+
+provider "github" {}
 
 # Site resources
 
@@ -65,7 +75,11 @@ resource "aws_ssm_parameter" "site_outputs" {
   type  = "String"
   value = each.value
 
-  tags = {
-    Environment = "prod"
-  }
+}
+
+resource "github_actions_environment_secret" "env_role_secret" {
+  repository      = basename(var.repo_name)
+  environment     = var.environment
+  secret_name     = "AWS_CLOUDFRONT_DISTRIBUTION_ID"
+  plaintext_value = module.site_cdn.cf_id
 }
