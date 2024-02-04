@@ -1,0 +1,34 @@
+name: Deploy Hugo Site to S3 with OIDC
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  deploy-to-prod:
+    runs-on: ubuntu-latest
+    environment: prod
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Get AWS credentials using OIDC
+        id: assume-role
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-region: ${{ secrets.AWS_REGION }}
+          role-to-assume: ${{ secrets.AWS_DEPLOY_ROLE_ARN }}
+          role-session-name: hugo-deploy-${{ github.run_id }}
+
+      - name: Install Hugo
+        run: sudo apt-get update && sudo apt-get install hugo -y
+
+      - name: Build the Hugo site
+        run: hugo
+
+      - name: Deploy to S3
+        run: hugo deploy --target prod # Change target to a var if you have multiple target envs
+
+      - name: Invalidate CloudFront cache (optional)
+        run: aws cloudfront create-invalidation --distribution-id ${{secrets.AWS_CLOUDFRONT_DISTRIBUTION_ID}} --paths "/*"

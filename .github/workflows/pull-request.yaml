@@ -23,9 +23,10 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          deploy_key: ${{ secrets.DEVOPSLOOP_DEV_DEPLOY_KEY }}
           publish_dir: ./public
           publish_branch: main
+          external_repository: "devopsloop-ss/devopsloop-ss.github.io"
           cname: devopsloop-ss.github.io
 
       - name: Display deployment link
