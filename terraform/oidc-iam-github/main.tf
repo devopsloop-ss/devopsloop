@@ -124,6 +124,17 @@ module "iam_github_oidc_role" {
 
 }
 
+# Rendering outputs
+resource "aws_ssm_parameter" "site_outputs" {
+  #checkov:skip=CKV_AWS_337: The parameter stores non sensitive values (recourse ids of cloud resources). KMS Encryption is not needed for this use case.
+  for_each = local.ssm_parameters
+
+  name  = each.key
+  type  = "String"
+  value = each.value
+
+}
+
 resource "github_actions_environment_secret" "env_role_secret" {
   repository      = basename(var.repo_name)
   environment     = var.environment

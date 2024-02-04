@@ -32,6 +32,10 @@ provider "github" {}
 
 # Site resources
 
+data "aws_ssm_parameter" "iam_github_oidc_role_arn" {
+  name = "GITHUB_ACTIONS_OIDC_ROLE_ARN"
+}
+
 module "acm_request_certificate" {
   source = "cloudposse/acm-request-certificate/aws"
   #checkov:skip=CKV_TF_1: This is a module with reliable versioning control. Terraform registry versioning is adequate.
@@ -58,6 +62,10 @@ module "site_cdn" {
   allow_ssl_requests_only = false
   acm_certificate_arn     = module.acm_request_certificate.arn
 
+  deployment_principal_arns = {
+    nonsensitive(data.aws_ssm_parameter.iam_github_oidc_role_arn.value) = [""]
+  }
+
   custom_origins = var.additonal_origins
 
 }
@@ -67,6 +75,7 @@ moved {
   to   = module.site_cdn
 }
 
+# Rendering outputs
 resource "aws_ssm_parameter" "site_outputs" {
   #checkov:skip=CKV_AWS_337: The parameter stores non sensitive values (recourse ids of cloud resources). KMS Encryption is not needed for this use case.
   for_each = local.ssm_parameters

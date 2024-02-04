@@ -32,6 +32,7 @@ The IaC in this repo deploys the necessary IAM resources for CI/CD automation in
 | Name | Type |
 |------|------|
 | [aws_iam_policy.github_actions_cloudfront_site](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_policy) | resource |
+| [aws_ssm_parameter.site_outputs](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/ssm_parameter) | resource |
 | [github_actions_environment_secret.env_role_secret](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/actions_environment_secret) | resource |
 | [aws_iam_policy_document.github_actions_cloudfront_site](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/iam_policy_document) | data source |
 | [aws_ssm_parameter.bucket_arn](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/ssm_parameter) | data source |

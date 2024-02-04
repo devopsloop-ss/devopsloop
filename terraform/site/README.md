@@ -33,6 +33,7 @@ The IaC in this repo deploys the necessary infra for devopsloop to AWS
 |------|------|
 | [aws_ssm_parameter.site_outputs](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/ssm_parameter) | resource |
 | [github_actions_environment_secret.env_role_secret](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/actions_environment_secret) | resource |
+| [aws_ssm_parameter.iam_github_oidc_role_arn](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/ssm_parameter) | data source |
 
 ## Inputs
 
