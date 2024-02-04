@@ -59,7 +59,6 @@ data "aws_iam_policy_document" "github_actions_cloudfront_site" {
       "s3:GetObjectAcl",
       "s3:GetObjectTagging",
       "s3:ListBucket",
-      "s3:ListObjectsV2",
       "s3:PutObject",
       "s3:PutObjectAcl",
       "s3:PutObjectTagging",
@@ -90,12 +89,6 @@ data "aws_iam_policy_document" "github_actions_cloudfront_site" {
     resources = [
       data.aws_ssm_parameter.distribution_arn.value,
     ]
-  }
-
-  statement {
-    effect    = "Deny"
-    actions   = ["*"]
-    resources = ["*"]
   }
 }
 
