@@ -49,5 +49,7 @@ The IaC in this repo deploys the necessary IAM resources for CI/CD automation in
 
 ## Outputs
 
-No outputs.
+| Name | Description |
+|------|-------------|
+| <a name="output_oidc_role_arn"></a> [oidc\_role\_arn](#output\_oidc\_role\_arn) | IAM OIDC Role ARN |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->

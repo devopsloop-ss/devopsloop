@@ -105,7 +105,9 @@ module "iam_github_oidc_role" {
   #checkov:skip=CKV_TF_1: This is a module with reliable versioning control. Terraform registry versioning is adequate.
   version = "5.34.0"
 
-  subjects = ["devopsloop-ss/devopsloop:*"]
+  name = "${var.project_name}-github"
+
+  subjects = ["devopsloop-ss/devopsloop:environment:${var.environment}:*"]
 
   policies = {
     #tflint-ignore: terraform_deprecated_interpolation
