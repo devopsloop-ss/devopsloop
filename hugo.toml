@@ -10,6 +10,7 @@ sectionPagesMenu = 'main'
   dateformShort   = "2 Jan"
   dateformNum     = "02-01-2006"
   dateformNumTime = "02-01-2006 15:04"
+  gitUrl = 'https://github.com/devopsloop-ss/devopsloop/commits/'
 
   # Subtitle for home
   homeSubtitle = "A blog by a DevOps engineer"
@@ -83,7 +84,6 @@ params.post-audio = true
     rss = false
     copyright = false
     author = true
-    gitinfo = true
 
     topText = []
     bottomText = [
