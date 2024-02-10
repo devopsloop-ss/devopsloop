@@ -39,7 +39,7 @@ sectionPagesMenu = 'main'
 
 [languages]
   [languages.en]
-    title = "What is this about?"
+    title = "This is DevOpsloop"
     copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
 
 
