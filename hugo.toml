@@ -74,7 +74,7 @@ sectionPagesMenu = 'main'
   # And you can even create generic menu
   [[menu.main]]
     identifier = "blog"
-    name       = "blogs"
+    name       = "blog"
     url        = "/blog"
 
   [[menu.main]]
