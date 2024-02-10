@@ -17,16 +17,26 @@
 
             {{ partial "subtitle.html" . }}
 
+            <p>
+                {{- if $.GitInfo -}}
+                    <small><small>Generated from: <a href="https://github.com/devopsloop-ss/devopsloop/commit/{{ .GitInfo.Hash }}" rel="noopener">devopsloop: {{ .GitInfo.AbbreviatedHash }}</a></small></small>
+                {{- else -}}
+                    &nbsp;
+                {{- end -}}
+            </p>
+
             {{- with .Site.Params.social }}
                 <div>
                     {{ partial "social-icons.html" . }}
                 </div>
             {{- end }}
-            <div style="margin-right: 20%;margin-left: 20%;"> 
-                
+
+            <div style="margin-right: 20%;margin-left: 20%;">
+
                 {{.Content }}
 
             </div>
         </div>
     </main>
+
 {{ end }}

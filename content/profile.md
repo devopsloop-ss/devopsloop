@@ -8,7 +8,7 @@ profilePic = "/img/profile_image.jpg"
 
 * * *
 
-[shubham@devopsloop.in](mailto:shubham@devopsloop.in) ∙ [LinkedIn/shubham-om-sinha](https://www.linkedin.com/in/shubham-om-sinha/) ∙ [View/Download as PDF](/Shubham-DevOps-Resume-2023-final.pdf)
+[shubham@devopsloop.in](mailto:shubham@devopsloop.in) ∙ [LinkedIn/shubham-om-sinha](https://www.linkedin.com/in/shubham-om-sinha/) ∙ [GitHub/devopsloop-ss](https://www.github.com/devopsloop-ss) ∙[View/Download as PDF](/Shubham-DevOps-Resume-2023-final.pdf)
 
 ### Overview
 
@@ -17,9 +17,9 @@ Results-oriented DevOps Engineer with 5+ years of experience designing, implemen
 <table style="border: none;">
 <tr style="border: none;">
 
-<th style="border: none;width: 50%"> 
+<th style="border: none;width: 50%">
 
-### Active Certfications 
+### Active Certfications
 
 </th>
 <th style="border: none;width: 50%">
@@ -79,7 +79,7 @@ Highlights:
 - Collaborated on designing cloud-based solutions on AWS, considering functional, scalability, cost, compliance, and performance needs.
 - Developed Ansible playbooks and roles, streamlining configuration management and onboarding new team members to the technology.
 - Documented architectures, procedures, tools, and best practices, enabling knowledge transfer and team alignment.
-- Actively participated in internal training programs, demonstrating continuous learning and commitment to professional development 
+- Actively participated in internal training programs, demonstrating continuous learning and commitment to professional development
 
 Skills: Ansible, Kubernetes, AWS, GCP
 </div>
@@ -93,7 +93,7 @@ Skills: Ansible, Kubernetes, AWS, GCP
 **IaC migration of an Enterprise Grade AWS Infra**
 
 Scope: </br>
-An enterprise client wanted to migrate their manually created infra on AWS to Terraform. Our goal was to support them through this transition by implementing reusable and easy to maintain IaC in Terraform and work together create the surrounding automation for the deployments. 
+An enterprise client wanted to migrate their manually created infra on AWS to Terraform. Our goal was to support them through this transition by implementing reusable and easy to maintain IaC in Terraform and work together create the surrounding automation for the deployments.
 
 Highlights:
 - Reduced manual configuration.
@@ -115,7 +115,7 @@ Highlights:
 
 **Backend API product for 5G infra of an enterprise client**
 
-Scope: 
+Scope:
 Our client was an Enterprise with their own 5G platform, working with various vendors to deliver infrastructure services and solutions to telecom companies. They needed to develop a mission critical API service to meet the telecom compliance requirements in their country.
 
 Highlights:

@@ -1,3 +1,4 @@
+enableGitInfo   = true
 baseURL = 'https://devopsloop.in/'
 languageCode = 'en-us'
 title = 'devopsloop'
@@ -5,10 +6,10 @@ theme = 'hello-friend-ng'
 sectionPagesMenu = 'main'
 
 [params]
-  dateform        = "Jan 2, 2006"
-  dateformShort   = "Jan 2"
-  dateformNum     = "2006-01-02"
-  dateformNumTime = "2006-01-02 15:04"
+  dateform        = " 2 Jan, 2006"
+  dateformShort   = "2 Jan"
+  dateformNum     = "02-01-2006"
+  dateformNumTime = "02-01-2006 15:04"
 
   # Subtitle for home
   homeSubtitle = "A blog by a DevOps engineer"
@@ -36,7 +37,6 @@ sectionPagesMenu = 'main'
     category = "blog"
     tag      = "tags"
     series   = "series"
-
 [languages]
   [languages.en]
     title = "This is DevOpsloop"
@@ -44,7 +44,7 @@ sectionPagesMenu = 'main'
 
 
   [languages.en.params]
-    subtitle  = "A simple theme for Hugo"
+    subtitle  = "A DevOps Odyssey"
     keywords = ""
     readOtherPosts = "Read other posts"
 
@@ -75,3 +75,18 @@ sectionPagesMenu = 'main'
   [[deployment.targets]]
   name = "prod"
   URL  = "s3://site-prod-devopsloop-site-origin?region=us-east-1"
+
+params.post-audio = true
+
+[params.footer]
+    trademark = 2024
+    rss = false
+    copyright = false
+    author = true
+    gitinfo = true
+
+    topText = []
+    bottomText = [
+      "Powered by <a href=\"http://gohugo.io\">Hugo</a>",
+      "Made with &#10084; by <a href=\"https://linkedin.com/in/shubham-om-sinha\">Shubham</a>",
+    ]
