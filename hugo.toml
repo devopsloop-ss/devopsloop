@@ -29,6 +29,20 @@ sectionPagesMenu = 'main'
   keywords = "homepage, blog"
   images = [""]
 
+# Social icons
+
+  [[params.social]]
+    name = "email"
+    url  = "mailto:shubham@devopsloop.in"
+
+  [[params.social]]
+    name = "github"
+    url  = "https://github.com/devopsloop-ss/"
+
+  [[params.social]]
+    name = "linkedin"
+    url  = "https://www.linkedin.com/in/shubham-om-sinha"
+
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
@@ -60,7 +74,7 @@ sectionPagesMenu = 'main'
   # And you can even create generic menu
   [[menu.main]]
     identifier = "blog"
-    name       = "Blog"
+    name       = "blogs"
     url        = "/blog"
 
   [[menu.main]]
