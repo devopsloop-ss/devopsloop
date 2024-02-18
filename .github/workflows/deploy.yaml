@@ -42,9 +42,9 @@ jobs:
           echo "Site root"
           ls public/
           echo "blog"
-          ls public/blog
+          ls public/posts
           echo "blog page contents"
-          cat public/blog/index.html
+          cat public/posts/index.html
           #hugo deploy --target prod # Change target to a var if you have multiple target envs
 
       # - name: Invalidate CloudFront cache (optional)
