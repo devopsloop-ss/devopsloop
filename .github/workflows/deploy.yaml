@@ -33,7 +33,9 @@ jobs:
           extended: true
 
       - name: Build the Hugo site
-        run: hugo
+        run: |
+          hugo
+          hugo
 
       - name: Deploy to S3
         run: |
