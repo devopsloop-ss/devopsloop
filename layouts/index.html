@@ -6,7 +6,7 @@
     <main aria-role="main">
         <div>
             Recent posts:
-            {{- range ( where site.RegularPages "Section" "blog" | first 4 ) }}
+            {{- range ( where site.RegularPages "Section" "posts" | first 4 ) }}
             <ul style="display:inline;"><a href="{{ .Permalink }}">{{ .Title }}</a></ul>
             {{- end}}
             {{ if .Site.Params.Portrait.Path }}
