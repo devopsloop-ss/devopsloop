@@ -21,7 +21,7 @@ jobs:
           extended: true
 
       - name: Build Hugo site
-        run: hugo --baseUrl=https://devopsloop-ss.github.io
+        run: hugo --baseURL=https://devopsloop-ss.github.io
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
