@@ -104,9 +104,9 @@ rssLimit  = 10  # Maximum number of items in the RSS feed.
 
 [menu]
   [[menu.main]]
-    identifier = "blog"
-    name       = "Blogs"
-    url        = "/blog"
+    identifier = "posts"
+    name       = "Posts"
+    url        = "/posts"
 
   [[menu.main]]
     identifier = "profile"
