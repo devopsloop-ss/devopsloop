@@ -4,6 +4,7 @@ languageCode = 'en-us'
 title = 'devopsloop'
 theme = 'hello-friend-ng'
 sectionPagesMenu = 'main'
+contentDir = 'content'
 
 [params]
   dateform        = " 2 Jan, 2006"
@@ -103,4 +104,5 @@ params.post-audio = true
     bottomText = [
       "Powered by <a href=\"http://gohugo.io\">Hugo</a>",
       "Made with &#10084; by <a href=\"https://linkedin.com/in/shubham-om-sinha\">Shubham</a>",
+      "hugo theme: <a href=\"https://github.com/rhazdon/hugo-theme-hello-friend-ng\">hello friend ng</a>"
     ]
