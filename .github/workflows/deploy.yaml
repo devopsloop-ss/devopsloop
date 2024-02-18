@@ -35,17 +35,21 @@ jobs:
       - name: Build the Hugo site
         run: |
           hugo
-          hugo
 
       - name: Deploy to S3
         run: |
-          echo "Site root"
+          echo "######## Site root"
+          echo
           ls public/
-          echo "blog"
+          echo
+          echo "######## Posts"
+          echo
           ls public/posts
-          echo "blog page contents"
+          echo
+          echo "######## Posts page contents"
           cat public/posts/index.html
-          #hugo deploy --target prod # Change target to a var if you have multiple target envs
+          echo
+          hugo deploy --target prod # Change target to a var if you have multiple target envs
 
-      # - name: Invalidate CloudFront cache (optional)
-      #   run: aws cloudfront create-invalidation --distribution-id ${{secrets.AWS_CLOUDFRONT_DISTRIBUTION_ID}} --paths "/*"
+      - name: Invalidate CloudFront cache (optional)
+        run: aws cloudfront create-invalidation --distribution-id ${{secrets.AWS_CLOUDFRONT_DISTRIBUTION_ID}} --paths "/*"
