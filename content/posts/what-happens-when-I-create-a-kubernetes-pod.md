@@ -8,6 +8,8 @@ tags = ["devops", "kubernetes", "what-happens-when"]
 
 _This blogpost takes a deepdive into the series of events that transpire, when a Kubernetes pod is created_
 
+![image](/post-images/kubernetes-pods.jpg)
+
 Have you ever wondered what happens behind the scenes when you create a pod in Kubernetes?
 This blog post aims to unveil the intricate dance of events that unfolds from the moment
 you issue a command like kubectl run to the point where your pod is up and running.

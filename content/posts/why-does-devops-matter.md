@@ -8,6 +8,8 @@ catergories = "devops"
 
 _This blogpost is meant to initiate a conversation about DevOps Engineers and the value they bring with their automations_
 
+![image](/post-images/neko-devops.jpg)
+
 Early in my career, a senior developer challenged me with a question: "Isn't DevOps just glorified support?"
 
 As a recent graduate facing a sea of unfamiliar acronyms and complex automation processes, it felt like a jab.
