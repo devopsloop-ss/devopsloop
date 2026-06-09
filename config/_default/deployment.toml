@@ -1,0 +1,3 @@
+[[targets]]
+  name = "prod"
+  URL  = "s3://site-prod-devopsloop-site-origin?region=us-east-1"
