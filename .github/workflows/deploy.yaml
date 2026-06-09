@@ -32,6 +32,15 @@ jobs:
           hugo-version: latest
           extended: true
 
+      - name: Generate PDF CV
+        run: |
+          hugo server --port 1314 &
+          HUGO_PID=$!
+          sleep 5
+          google-chrome --headless=new --disable-gpu --no-sandbox --no-pdf-header-footer --print-to-pdf=static/Shubham-DevOps-CV.pdf http://localhost:1314/profile/
+          kill $HUGO_PID
+          ls -lh static/Shubham-DevOps-CV.pdf
+
       - name: Build the Hugo site
         run: |
           hugo

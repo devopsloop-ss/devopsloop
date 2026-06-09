@@ -1,47 +1,146 @@
 {{ define "main" }}
-    <main class="post">
+<article>
+  <style>
+    /* Screen Styles (tighten margins and expand width to prevent large right gap) */
+    .max-w-prose, .prose {
+      max-width: 100% !important;
+    }
+    .prose h1, .prose h2, .prose h3, .prose h4 {
+      margin-top: 1.25rem !important;
+      margin-bottom: 0.5rem !important;
+      line-height: 1.25 !important;
+    }
+    .prose p, .prose ul, .prose ol, .prose table {
+      margin-top: 0.5rem !important;
+      margin-bottom: 0.5rem !important;
+      line-height: 1.5 !important;
+    }
+    .prose li {
+      margin-top: 0.25rem !important;
+      margin-bottom: 0.25rem !important;
+    }
+    .prose td, .prose th {
+      padding-top: 0.25rem !important;
+      padding-bottom: 0.25rem !important;
+    }
+    .prose hr {
+      margin-top: 0.5rem !important;
+      margin-bottom: 0.5rem !important;
+      border: 0 !important;
+      border-top: 1px solid #6b7280 !important;
+    }
 
-        <div class="post-info">
-            {{ if .IsTranslated }}
-                {{ i18n "postAvailable" }}
-                {{ range .Translations }}
-                    <a href="{{ .Permalink }}"><span class="flag fi fi-{{ index $.Site.Data.langFlags (.Lang) }}"></span></a>
-                {{ end}}
-            {{ end }}
-            </p>
-        </div>
+    @media print {
+      /* Hide site navigation, footers, theme toggles, search modal, scroll-to-top, and PDF links in the print output */
+      .main-menu, .main-menu *, footer, footer *, #site-footer, #site-footer *, .theme-toggle, .menu-trigger, .pdf-link, #search-wrapper, #scroll-to-top, #the-top {
+        display: none !important;
+      }
+      
+      /* Reset structure for multi-page printing */
+      html, body, .flex, .grow, main, article, section {
+        height: auto !important;
+        min-height: 0 !important;
+        max-height: none !important;
+        overflow: visible !important;
+        display: block !important;
+        background: white !important;
+        color: black !important;
+      }
 
-        <article>
-            <h2 class="post-title" style="margin-bottom: 0%;display:inline-block;margin-right:0%;">
-                <a href="{{ .Permalink }}">{{ .Title | markdownify }}</a> 
-            </h2>
-            {{ if .Params.profilePic }}
-            <picture style="width:20%;height:20%;overflow:hidden;float:right;position:relative;">
-                <img src="{{ .Params.profilePic | absURL }}" alt="{{ .Title }}" style="border-radius: 50%;text-wrap: balance"/>
-            </picture>
-            {{ end }}
-        </article>
-        <article> 
-            <div class="post-content" style="margin-top: 0%;">
-                <style>
-                    h2 {
-                        margin-top: 4%;
-                        margin-bottom: 8%;
-                    }
-                </style>
-                {{ .Content }}
-            </div>
-        </article>
+      /* Specific page settings */
+      @page {
+        size: A4;
+        margin: 15mm !important;
+      }
 
-        <hr />
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
+        font-size: 10pt !important;
+        line-height: 1.3 !important;
+        color: #111 !important;
+      }
 
-        <div class="post-info">
-            {{ partial "tags.html" .Params.tags }}
-            {{ partial "categories.html" . }}
+      /* Tighten spacing for headings and elements to look like a professional CV */
+      h1, h2, h3, h4, h5, h6 {
+        color: #000 !important;
+        font-weight: bold !important;
+        line-height: 1.2 !important;
+        margin-top: 10px !important;
+        margin-bottom: 4px !important;
+      }
 
-            {{- if .GitInfo }}
-			    <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-git-commit"><circle cx="12" cy="12" r="4"></circle><line x1="1.05" y1="12" x2="7" y2="12"></line><line x1="17.01" y1="12" x2="22.96" y2="12"></line></svg><a href="{{ .Site.Params.gitUrl -}}{{ .GitInfo.Hash }}" target="_blank" rel="noopener">{{ .GitInfo.AbbreviatedHash }}</a> @ {{ if .Site.Params.dateformNum }}{{ dateFormat .Site.Params.dateformNum .GitInfo.AuthorDate.Local }}{{ else }}{{ dateFormat "2006-01-02" .GitInfo.AuthorDate.Local }}{{ end }}</p>
-			{{- end }}
-  		</div>
-    </main>
+      h1 { font-size: 20pt !important; }
+      h2 { font-size: 13pt !important; border-bottom: 1px solid #ccc !important; padding-bottom: 2px !important; }
+      h3 { font-size: 10.5pt !important; }
+
+      p, ul, ol, table {
+        margin-top: 4px !important;
+        margin-bottom: 4px !important;
+        line-height: 1.3 !important;
+      }
+
+      li {
+        margin-top: 1px !important;
+        margin-bottom: 1px !important;
+      }
+
+      hr {
+        display: none !important;
+      }
+
+      /* Grid/tables styling for printing */
+      table {
+        width: 100% !important;
+        border-collapse: collapse !important;
+        margin-top: 6px !important;
+        margin-bottom: 6px !important;
+      }
+
+      td, th {
+        padding: 2px 0px !important;
+        border: none !important;
+      }
+
+      /* Keep profile photo container inline-block and floating */
+      .flex-shrink-0 {
+        float: right !important;
+        display: block !important;
+        margin-top: -42px !important; /* pull it up inline with the name */
+      }
+      
+      /* Avoid breaking page inside elements */
+      h2, h3, h4, li, tr, p {
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+      }
+
+      /* Explicitly override prose styling */
+      .prose, .prose *, .dark .prose, .dark .prose * {
+        color: #111 !important;
+        font-size: 10pt !important;
+      }
+      .max-w-prose, .prose {
+        max-width: 100% !important;
+        width: 100% !important;
+      }
+    }
+  </style>
+  <header class="max-w-prose mt-0">
+    <div class="flex flex-row justify-between items-center mb-6">
+      <div>
+        <h1 class="mt-0 text-3xl font-extrabold text-neutral-900 dark:text-neutral">
+          {{ .Title }}
+        </h1>
+      </div>
+      {{ if .Params.profilePic }}
+      <div class="flex-shrink-0 ml-4">
+        <img src="{{ .Params.profilePic | absURL }}" alt="{{ .Title }}" class="rounded-full border-2 border-neutral-200 dark:border-neutral-700" style="width: 80px; height: 80px; object-fit: cover; border-radius: 50%;" />
+      </div>
+      {{ end }}
+    </div>
+  </header>
+  <section class="max-w-prose prose dark:prose-invert">
+    {{ .Content }}
+  </section>
+</article>
 {{ end }}

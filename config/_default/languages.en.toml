@@ -1,0 +1,27 @@
+disabled = false
+locale = "en"
+label = "English"
+weight = 1
+title = "devopsloop"
+
+[params]
+  displayName = "EN"
+  isoCode = "en"
+  rtl = false
+  dateFormat = "2 Jan, 2006"
+  logo = "img/devopsloop-new.png"
+  description = "A Blog about DevOps Journey, tools and tech"
+  copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
+
+[params.author]
+  name = "Shubham"
+  email = "shubham@devopsloop.in"
+  image = "img/profile_image.jpg"
+  imageQuality = 96
+  headline = "DevOps Engineer - Cloud, IaC"
+  bio = "A blog about DevOps Journey, tools and tech"
+  links = [
+    { email = "mailto:shubham@devopsloop.in" },
+    { github = "https://github.com/devopsloop-ss" },
+    { linkedin = "https://www.linkedin.com/in/shubham-om-sinha" }
+  ]

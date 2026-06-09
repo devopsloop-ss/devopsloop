@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Profile Preview - Shubham Sinha</title>
+  <style>
+    body {
+      margin: 0;
+      background: #ffffff;
+      color: #222222;
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.58;
+    }
+    main {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 48px 24px 72px;
+    }
+    h1, h2, h3 {
+      line-height: 1.25;
+    }
+    h1 {
+      display: inline-block;
+      margin-bottom: 0;
+      font-size: 2rem;
+    }
+    h2 {
+      margin-top: 32px;
+    }
+    h3 {
+      margin-top: 28px;
+    }
+    a {
+      color: #0066cc;
+    }
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+      float: right;
+      object-fit: cover;
+      border-radius: 50%;
+      margin: 0 0 24px 24px;
+    }
+    .rule {
+      border: 0;
+      border-top: 1px solid #6b7280;
+      margin: 8px 0 10px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 28px;
+      align-items: start;
+    }
+    .badge {
+      width: 82px;
+      height: 82px;
+      border-radius: 8px;
+      margin: 0 6px 8px 0;
+    }
+    .keywords {
+      font-size: 0.95rem;
+    }
+    @media (max-width: 720px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+      .profile-pic {
+        width: 112px;
+        height: 112px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <img class="profile-pic" src="../static/img/profile_image.jpg" alt="Shubham Sinha">
+    <h1>Shubham Sinha</h1>
+    <h2>DevOps Engineer - Cloud, IaC</h2>
+    <hr class="rule">
+    <p><a href="mailto:shubham@devopsloop.in">shubham@devopsloop.in</a> ∙ <a href="https://www.linkedin.com/in/shubham-om-sinha/">LinkedIn/shubham-om-sinha</a> ∙ <a href="https://www.github.com/devopsloop-ss">GitHub/devopsloop-ss</a> ∙ <a href="../static/Shubham-DevOps-CV.pdf">View/Download as CV</a></p>
+
+    <h3>Overview</h3>
+    <p>DevOps Engineer with 7+ years of experience designing, automating, and scaling cloud-native infrastructure, CI/CD pipelines, and multi-cloud solutions for enterprise environments. Strong background in Infrastructure as Code (IaC) with Terraform, AWS and GCP cloud delivery, Kubernetes container orchestration, and developer enablement.</p>
+    <p>Specialized in converting manually managed environments into reusable, version-controlled IaC; building secure, repeatable deployment workflows; and implementing deployment patterns that improve release velocity, system reliability, and delivery pipelines. When not focused on critical delivery path tasks, I design and build custom automation utilities and developer tools—utilizing both traditional scripting and AI integration—to eliminate operational bottlenecks and elevate developer experience (DevEx) across teams.</p>
+
+    <h3>Core Skills</h3>
+    <p><strong>Cloud and Infrastructure:</strong> AWS, GCP, VPC, IAM, EC2, ECS/EKS, load balancing, networking, security controls, multi-environment infrastructure, cloud migration support</p>
+    <p><strong>Infrastructure as Code:</strong> Terraform, reusable modules, remote state, environment promotion, drift reduction, IaC migration, infrastructure review workflows</p>
+    <p><strong>DevOps and CI/CD Automation:</strong> GitOps (ArgoCD), CI/CD, GitHub Actions, Jenkins, release automation, configuration management, deployment verification, operational documentation</p>
+    <p><strong>Containers and Kubernetes:</strong> Kubernetes, Google Anthos, Helm, containerized application deployment, workload configuration, cluster operations, deployment troubleshooting</p>
+    <p><strong>Automation and Operations:</strong> Bash, PowerShell, Ansible, Linux, incident support, runbooks, observability (Prometheus, Grafana, ELK Stack), compliance-aligned delivery, GitHub Copilot</p>
+    <p><strong>Ways of Working:</strong> Agile delivery, cross-functional collaboration, architecture documentation, stakeholder communication, open source contribution, technical mentoring</p>
+
+    <div class="grid">
+      <section>
+        <h3>Active Certifications</h3>
+        <img class="badge" src="../static/img/certification-badges/aws-ai-practitioner.png" alt="AWS Certified AI Practitioner">
+        <img class="badge" src="../static/img/certification-badges/terraform-associate-003.png" alt="HashiCorp Certified: Terraform Associate 003">
+        <img class="badge" src="../static/img/certification-badges/aws-ans.png" alt="AWS Certified Advanced Networking Specialty">
+        <ul>
+          <li>AWS Certified AI Practitioner</li>
+          <li>HashiCorp Certified: Terraform Associate (003)</li>
+          <li>AWS Certified Advanced Networking - Specialty</li>
+        </ul>
+      </section>
+      <section>
+        <h3>Other / Past Certifications</h3>
+        <img class="badge" src="../static/img/certification-badges/aws-devops-pro.png" alt="AWS Certified DevOps Engineer Professional">
+        <img class="badge" src="../static/img/certification-badges/ckad.png" alt="Certified Kubernetes Application Developer">
+        <ul>
+          <li>AWS Certified DevOps Engineer - Professional</li>
+          <li>CNCF Certified Kubernetes Application Developer</li>
+          <li>Red Hat Certified System Administrator</li>
+          <li>Red Hat Certified Specialist in OpenShift Administration</li>
+          <li>Red Hat Certified Specialist in Ansible Automation</li>
+          <li>AWS Certified Developer - Associate</li>
+          <li>AWS Certified Cloud Practitioner</li>
+        </ul>
+      </section>
+    </div>
+
+    <h3>Work Experience</h3>
+    <p><strong>EPAM Systems (Sep 2024 - Present)</strong></p>
+    <p>Role: Senior System Engineer</p>
+    <ul>
+      <li>Engineered application migrations and container workloads within a complex multi-cloud environment (MCOM), leveraging Jenkins, GKE, AWS EKS, and Google Anthos to establish secure, scalable orchestration platforms.</li>
+      <li>Established GitOps continuous delivery patterns for GKE and EKS workloads using ArgoCD and GitHub Actions, automating cluster state synchronization and drift remediation.</li>
+      <li>Designed and implemented secure secrets management systems using HashiCorp Vault, achieving strict access controls and credential rotating configurations.</li>
+      <li>Optimized delivery workflows and accelerated code delivery by building end-to-end CI/CD pipelines utilizing Helm, JFrog Artifactory, and Google Artifact Registry.</li>
+      <li>Enhanced platform observability and reduced incident resolution times by configuring comprehensive monitoring, alerting, and logging dashboards using Prometheus, Grafana, and the ELK Stack.</li>
+      <li>Leveraged agentic workflows with GitHub Copilot to automate repetitive tasks, scripting utilities that optimized daily operational efficiency.</li>
+      <li>Collaborated with cross-functional stakeholders and developers to resolve blockers, ensuring minimal downtime and seamless transitions during cutover and handover exercises.</li>
+    </ul>
+    <p><strong>Skills:</strong> DevOps, Cloud Computing, Kubernetes, GKE, EKS, Anthos, GitOps, ArgoCD, Jenkins, Helm, JFrog Artifactory, Google Artifact Registry, HashiCorp Vault, Prometheus, Grafana, ELK Stack, GitHub Copilot, Multi-Cloud</p>
+
+    <p><strong>SourceFuse (Nov 2020 - Sep 2024)</strong></p>
+    <p>Roles: DevOps Engineer, Junior DevOps Engineer</p>
+    <ul>
+      <li>Led the transition of legacy client AWS environments into version-controlled Terraform IaC, designing reusable modules that standardized provisioning and eliminated configuration drift.</li>
+      <li>Architected and deployed production-ready CI/CD pipelines using GitHub Actions and Jenkins, automating multi-environment promotions and validation checks.</li>
+      <li>Standardized Kubernetes deployments by implementing GitOps delivery pipelines with ArgoCD and Helm charts, reducing manual deployment errors.</li>
+      <li>Built monitoring dashboards and alerting configurations using Prometheus and Grafana to track application performance and infrastructure health.</li>
+      <li>Contributed to and maintained the organization's open-source and internal reference architecture Terraform modules, reducing new environment provisioning times by 40%.</li>
+      <li>Managed, deployed, and supported open-source and custom containerized applications on Kubernetes (EKS/GKE) and Helm, improving container scheduling efficiency.</li>
+      <li>Partnered with client-side engineering teams, security officers, and architects to integrate platform services under strict design and compliance guidelines.</li>
+    </ul>
+    <p><strong>Skills:</strong> Terraform, AWS, GitOps, ArgoCD, GitHub Actions, Jenkins, Kubernetes, Helm, Prometheus, Grafana, Bash, PowerShell, Linux, IaC migration, DevOps automation, open source</p>
+
+    <p><strong>Daffodil Software (Jan 2019 - Oct 2020)</strong></p>
+    <p>Role: Junior Associate IT (DevOps)</p>
+    <ul>
+      <li>Collaborated on building scalable AWS and GCP cloud solutions, ensuring compliance, performance, and cost-efficiency.</li>
+      <li>Standardized server configurations and accelerated developer onboarding by creating reusable Ansible playbooks and roles.</li>
+      <li>Implemented and documented automated CI/CD pipelines to streamline application releases and testing workflows.</li>
+      <li>Deployed, operated, and troubleshot development and staging Kubernetes clusters and containerized microservices.</li>
+      <li>Authored architecture diagrams, runbooks, and recovery guides to ensure knowledge transfer and operational continuity.</li>
+    </ul>
+    <p><strong>Skills:</strong> Ansible, Kubernetes, AWS, GCP, Linux, configuration management, cloud operations, technical documentation</p>
+
+    <h3>Selected Projects</h3>
+    <div class="grid">
+      <section>
+        <p><strong>Enterprise AWS Infrastructure Migration to Terraform</strong></p>
+        <p>Supported an enterprise client in migrating manually created AWS infrastructure to Terraform. The work focused on reusable IaC design, environment consistency, reviewable change workflows, and automation around infrastructure deployments.</p>
+        <ul>
+          <li>Migrated manually managed resources into maintainable Terraform code and reusable modules.</li>
+          <li>Improved infrastructure consistency across environments by standardizing naming, configuration, and deployment patterns.</li>
+          <li>Reduced reliance on manual console changes by introducing Git-based review and GitHub Actions driven Terraform workflows.</li>
+          <li>Helped create documentation and handover practices for long-term client ownership.</li>
+        </ul>
+        <p><strong>Internal Developer Platform and Reusable IaC Modules</strong></p>
+        <p>Helped standardize infrastructure delivery across projects by building reusable Terraform components and supporting self-service patterns for engineering teams.</p>
+        <ul>
+          <li>Improved developer productivity by making common infrastructure patterns easier to consume.</li>
+          <li>Reduced environment setup effort through reusable IaC components and repeatable automation.</li>
+          <li>Supported platform governance by encouraging consistent infrastructure defaults and code review practices.</li>
+          <li>Contributed to open source module development and internal enablement documentation.</li>
+        </ul>
+      </section>
+      <section>
+        <p><strong>Mission-Critical Backend API Platform for Enterprise 5G Infrastructure</strong></p>
+        <p>Supported infrastructure and deployment automation for an enterprise 5G platform serving telecom infrastructure and compliance use cases.</p>
+        <ul>
+          <li>Supported cloud infrastructure, CI/CD, and deployment workflows for a mission-critical API service.</li>
+          <li>Improved operational readiness through automation, documentation, and environment consistency.</li>
+          <li>Supported audit and security-aligned delivery practices for telecom requirements.</li>
+          <li>Helped engineering teams troubleshoot deployments and reduce operational friction during delivery.</li>
+        </ul>
+        <p><strong>Enterprise Multi-Wave Multi-Cloud Migration & Platform Orchestration</strong></p>
+        <p>Orchestrated a multi-wave migration of application workloads and infrastructure for a complex multi-cloud environment, coordinating across multiple engineering teams and stakeholders.</p>
+        <ul>
+          <li>Migrated legacy container workloads and microservices to GKE and AWS EKS managed by Google Anthos.</li>
+          <li>Designed secure secrets management architectures with HashiCorp Vault and rotating credentials.</li>
+          <li>Standardized release mechanisms by building Helm charts, ArgoCD GitOps configurations, and Jenkins CI/CD pipelines.</li>
+          <li>Aligned migration waves across developer, security, and ops teams to guarantee zero-downtime cutovers.</li>
+        </ul>
+      </section>
+    </div>
+
+    <h3>CV Keywords</h3>
+    <p class="keywords">DevOps Engineer, Cloud Engineer, Site Reliability Engineering, Infrastructure as Code, Terraform, AWS, Kubernetes, Helm, GitOps, ArgoCD, Prometheus, Grafana, CI/CD, GitHub Actions, Jenkins, Ansible, Bash, PowerShell, Linux, cloud migration, IaC migration, reusable Terraform modules, enterprise infrastructure, automation, release engineering, deployment automation, configuration management, cloud networking, IAM, security, compliance, operational documentation, runbooks, agile delivery.</p>
+  </main>
+</body>
+</html>
